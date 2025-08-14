@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manual completo de degradados CSS: teoría, ejemplos prácticos y tips de diseño web.">
+    <meta name="keywords" content="degradados css, linear-gradient, radial-gradient, manual, tutorial, diseño web">
+    <meta name="author" content="Martin">
+    <title>Manual de Degradados CSS - ToolHub Creativo</title>
+    <link rel="stylesheet" href="../global.css">
+    <style>
+        .preview-box {
+            height: 100px;
+            border-radius: 5px;
+            margin: 0.5rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        pre code {
+            display: block;
+            background: #f0f0f0;
+            padding: 0.5rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        nav.manual-nav {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f8f8;
+            border-radius: 5px;
+        }
+        nav.manual-nav a {
+            display: block;
+            margin: 0.2rem 0;
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="../paleta.html">Paleta de Colores</a>
+            <a href="../ico.html">Conversor .ICO</a>
+            <a href="../degradados.html">Degradados CSS</a>
+            <a href="../texturas.html">Texturas</a>
+            <a href="../guias.html">Guías</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>🌈 Manual Completo: Degradados CSS</h1>
+
+        <!-- Índice -->
+        <nav class="manual-nav">
+            <strong>Índice:</strong>
+            <a href="#introduccion">1. Introducción</a>
+            <a href="#sintaxis">2. Sintaxis básica</a>
+            <a href="#ejemplos">3. Ejemplos prácticos</a>
+            <a href="#avanzado">4. Aplicaciones avanzadas / Tips</a>
+            <a href="#resumen">5. Resumen / Recomendaciones</a>
+        </nav>
+
+        <!-- Sección 1: Introducción -->
+        <section id="introduccion" class="tool-card">
+            <h2>1. Introducción</h2>
+            <p>Los degradados CSS permiten combinar colores suavemente y aplicarlos a fondos, botones, tarjetas o cualquier elemento. Se pueden crear de forma <strong>lineal</strong> (linear-gradient) o <strong>radial</strong> (radial-gradient).</p>
+            <h2>Explicacion</h2>
+            Los degradados en CSS están representados por el tipo de dato <gradient>, un tipo especial de <image> hecho de una transición progresiva entre dos o más colores. Puede elegir entre tres tipos de degradados: lineal (creado con la función linear-gradient()), radial (creado con la función radial-gradient()) y cónica (creada con la función conic-gradient()). También puede crear degradados repetidos con repeating-linear-gradient(), repeating-radial-gradient(), y repeating-conic-gradient().
+
+Los degradados se pueden usar en cualquier lugar donde usaría <image>, como en los fondos. Debido a que los degradados se generan dinámicamente, pueden anular la necesidad de los archivos de imagen de trama que tradicionalmente se usaban para lograr efectos similares. Además, debido a que los degradados son generados por el navegador, se ven mejor que las imágenes rasterizadas cuando se acercan y se pueden cambiar de tamaño sobre la marcha.
+
+Comenzaremos introduciendo degradados lineales, luego presentaremos características que son compatibles con todos los tipos de degradados usando degradados lineales como ejemplo, luego pasaremos a degradados radiales, cónicos y repetitivos..
+
+<h2>Usando degradados lineales</h2>
+Un degradado lineal crea una banda de colores que progresan en línea recta.
+
+<h2>Un degradado lineal básico</h2>
+Para crear el tipo de degradado más básico, todo lo que necesita es especificar dos colores. Estos se llaman paradas de color. Debes tener al menos dos, pero puedes tener tantos como quieras.
+        </section>
+
+        <!-- Sección 2: Sintaxis básica -->
+        <section id="sintaxis" class="tool-card">
+            <h2>2. Sintaxis básica</h2>
+            <p><strong>Linear-gradient:</strong> define un degradado en línea recta entre colores.</p>
+            <pre><code>background: linear-gradient(to right, #667eea, #764ba2);</code></pre>
+            <p><strong>Radial-gradient:</strong> define un degradado circular desde el centro.</p>
+            <pre><code>background: radial-gradient(circle, #667eea, #764ba2);</code></pre>
+            <p>Se pueden usar múltiples colores y controlar los porcentajes de transición.</p>
+        </section>
+
+        <!-- Sección 3: Ejemplos prácticos -->
+        <section id="ejemplos" class="tool-card">
+            <h2>3. Ejemplos prácticos</h2>
+            
+            <p>Ejemplo 1: Degradado en un <code>header</code></p>
+            <div class="preview-box" style="background: linear-gradient(to right, #667eea, #764ba2);"></div>
+            <pre><code>header {
+    background: linear-gradient(to right, #667eea, #764ba2);
+}</code></pre>
+
+            <p>Ejemplo 2: Degradado en un botón</p>
+            <div class="preview-box" style="background: linear-gradient(to bottom, #f6d365, #fda085); width:150px;"></div>
+            <pre><code>button {
+    background: linear-gradient(to bottom, #f6d365, #fda085);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}</code></pre>
+
+            <p>Ejemplo 3: Degradado radial en un contenedor</p>
+            <div class="preview-box" style="background: radial-gradient(circle, #667eea, #764ba2);"></div>
+            <pre><code>.contenedor {
+    background: radial-gradient(circle, #667eea, #764ba2);
+    padding: 20px;
+}</code></pre>
+        </section>
+
+        <!-- Sección 4: Aplicaciones avanzadas / Tips -->
+        <section id="avanzado" class="tool-card">
+            <h2>4. Aplicaciones avanzadas / Tips</h2>
+            <ul>
+                <li>Combina degradados con opacidad usando <code>rgba</code> para efectos de overlay.</li>
+                <li>Usa ángulos personalizados para linear-gradient, como <code>45deg</code>.</li>
+                <li>Evita degradados muy saturados que dificulten la lectura de texto encima.</li>
+                <li>Experimenta combinando degradados lineales y radiales en un mismo fondo.</li>
+            </ul>
+        </section>
+
+        <!-- Sección 5: Resumen / Recomendaciones -->
+        <section id="resumen" class="tool-card">
+            <h2>5. Resumen / Recomendaciones</h2>
+            <p>Los degradados son una herramienta poderosa para darle estilo a tu web. Recuerda:</p>
+            <ul>
+                <li>Usar colores armoniosos.</li>
+                <li>Probar distintos ángulos y combinaciones.</li>
+                <li>Siempre considerar la legibilidad del contenido encima del degradado.</li>
+            </ul>
+        </section>
+
+        <a href="../guias.html" style="display:inline-block; margin-top:1rem;">← Volver a Guías Rápidas</a>
+    </main>
+
+    <footer>
+        <p>© 2025 ToolHub Creativo | Hecho con ❤️ por Martin</p>
+    </footer>
+</body>
+</html>

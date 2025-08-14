@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guías rápidas para artistas y diseñadores: degradados CSS, favicons y paletas armónicas">
+    <meta name="keywords" content="guías diseño, degradados CSS, favicon, paletas de colores, tutorial rápido">
+    <meta name="author" content="Martin Alejandro Sayago">
+    <link rel="icon" href="/favicon.ico" sizes="32x32" type="image/x-icon">
+    <title>Guías Rápidas - ToolHub Creativo</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        hr{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" title="Volver al inicio">Inicio</a>
+            <a href="paleta.html" title="Generador de paletas de colores">Paleta de Colores</a>
+            <a href="ico.html" title="Conversor de imágenes a iconos .ico">Conversor .ico</a>
+            <a href="degradados.html" title="Generador de degradados CSS">Degradados CSS</a>
+            <a href="textura.html" title="Generador de texturas para diseño">Texturas</a>
+            <a href="guias.html" title="Guías y tutoriales de diseño">Guías</a>
+        </nav>
+    </header>
+
+    <main class="container">
+    <h1>📚 Guías Rápidas</h1>
+    <p style="text-align:center;">Aprende con ejemplos prácticos y consejos para usar las herramientas del hub.</p>
+
+    <section class="tool-card">
+        <h2>¡Aviso importante!</h2>
+        <p>Esta seccion se encuentra en proceso</p>
+        <p>Próximamente habrá guías y manuales.</p>
+        
+        <hr>
+
+    <!-- Guía 1: Degradados CSS -->
+    <section class="tool-card">
+        <h2>🌈 Cómo hacer degradados CSS</h2>
+        <p>Usa <code>linear-gradient</code> para combinar colores y crear fondos llamativos.</p>
+        
+        <!-- Mini preview -->
+        <div id="gradPreview" style="height:80px; border-radius:5px; margin-bottom:0.5rem; box-shadow:0 2px 6px rgba(0,0,0,0.1); background: linear-gradient(to right, #667eea, #764ba2);"></div>
+        
+        <pre><code id="gradCode">background: linear-gradient(to right, #667eea, #764ba2);</code></pre>
+        <button onclick="copyText('gradCode')">Copiar Código</button>
+    </section>
+
+    <!-- Guía 2: Exportar favicon -->
+    <section class="tool-card">
+        <h2>🖼 Cómo exportar un favicon para tu web</h2>
+        <p>Sube tu imagen al conversor de <code>.ICO</code>, descarga el archivo y súbelo a la raíz de tu proyecto web.</p>
+        
+        <!-- Mini preview -->
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.5rem;">
+            <img src="favicon-example.png" alt="Favicon ejemplo" style="width:32px; height:32px; border:1px solid #ccc; border-radius:5px;">
+            <span>Ejemplo de favicon</span>
+        </div>
+        
+        <pre><code id="faviconCode">&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code></pre>
+        <button onclick="copyText('faviconCode')">Copiar Código</button>
+    </section>
+
+    <!-- Guía 3: Paletas armónicas -->
+    <section class="tool-card">
+        <h2>🎨 Cómo elegir paletas armónicas</h2>
+        <p>Combina colores siguiendo esquemas: complementarios, análogos o triádicos. Esto genera armonía visual.</p>
+        
+        <!-- Mini preview -->
+        <div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+            <div style="background:#667eea; width:50px; height:50px; border-radius:5px;"></div>
+            <div style="background:#764ba2; width:50px; height:50px; border-radius:5px;"></div>
+            <div style="background:#f6d365; width:50px; height:50px; border-radius:5px;"></div>
+        </div>
+        
+        <p><strong>Tip rápido:</strong> Usa el generador de paletas del hub para inspirarte y copiar combinaciones listas.</p>
+    </section>
+</main>
+
+<script>
+function copyText(id) {
+    const el = document.getElementById(id);
+    navigator.clipboard.writeText(el.innerText)
+        .then(() => alert('Código copiado al portapapeles!'))
+        .catch(() => alert('Error al copiar el código.'));
+}
+</script>
+
+
+    <footer>
+        <p>© 2025 ToolHub Creativo | Hecho con ❤️ por Martin</p>
+    </footer>
+</body>
+</html>

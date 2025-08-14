@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía práctica para aprender a usar [TEMA] en diseño web. Ejemplos, tips y código listo.">
+    <meta name="keywords" content="[TEMA], tutorial web, css, html, diseño web, ejemplos prácticos">
+    <meta name="author" content="Martin">
+    <title>Guía de [TEMA] - ToolHub Creativo</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        .preview-box {
+            height: 100px;
+            border-radius: 5px;
+            margin: 0.5rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        pre code {
+            display: block;
+            background: #f0f0f0;
+            padding: 0.5rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="../paleta.html">Paleta de Colores</a>
+            <a href="../ico.html">Conversor .ICO</a>
+            <a href="../degradados.html">Degradados CSS</a>
+            <a href="../texturas.html">Texturas</a>
+            <a href="../guias.html">Guías</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>📖 Guía Práctica: [TEMA]</h1>
+        <p>Aprende a usar <strong>[TEMA]</strong> en tus proyectos web con ejemplos prácticos y código listo para copiar.</p>
+
+        <!-- Sección 1: Introducción -->
+        <section class="tool-card">
+            <h2>Introducción</h2>
+            <p>Breve explicación sobre [TEMA] y su utilidad en diseño web.</p>
+        </section>
+
+        <!-- Sección 2: Sintaxis básica / Ejemplo -->
+        <section class="tool-card">
+            <h2>Ejemplo Básico</h2>
+            <p>Este es un ejemplo práctico de [TEMA]:</p>
+            <div id="preview" class="preview-box"></div>
+            <pre><code id="codeExample">/* Código de ejemplo aquí */</code></pre>
+            <button onclick="copyCode('codeExample')">Copiar Código</button>
+        </section>
+
+        <!-- Sección 3: Aplicaciones prácticas -->
+        <section class="tool-card">
+            <h2>Aplicaciones Prácticas</h2>
+            <p>Cómo usar [TEMA] en botones, listas, headers u otros elementos del sitio.</p>
+        </section>
+
+        <!-- Sección 4: Tips de diseño -->
+        <section class="tool-card">
+            <h2>Tips y Buenas Prácticas</h2>
+            <ul>
+                <li>Tip 1 sobre [TEMA]</li>
+                <li>Tip 2 sobre [TEMA]</li>
+                <li>Tip 3 sobre [TEMA]</li>
+            </ul>
+        </section>
+
+        <a href="../guias.html" style="display:inline-block; margin-top:1rem;">← Volver a Guías Rápidas</a>
+    </main>
+
+    <footer>
+        <p>© 2025 ToolHub Creativo | Hecho con ❤️ por Martin</p>
+    </footer>
+
+    <script>
+        function copyCode(id) {
+            const el = document.getElementById(id);
+            navigator.clipboard.writeText(el.innerText)
+                .then(() => alert('Código copiado al portapapeles!'))
+                .catch(() => alert('Error al copiar el código.'));
+        }
+
+        // Ejemplo dinámico: preview interactivo
+        const preview = document.getElementById('preview');
+        preview.style.background = 'linear-gradient(to right, #667eea, #764ba2)';
+        document.getElementById('codeExample').innerText = 'background: linear-gradient(to right, #667eea, #764ba2);';
+    </script>
+</body>
+</html>

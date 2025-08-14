@@ -1,0 +1,147 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap');
+
+/* Variables de colores */
+:root {
+    --bg: #f9f9f9;
+    --bg-alt: #ffffff;
+    --text: #333333;
+    --accent: #667eea;
+    --accent-hover: #556cd6;
+    --shadow: rgba(0,0,0,0.1);
+}
+
+/* Modo oscuro automático */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #121212;
+        --bg-alt: #1e1e1e;
+        --text: #f0f0f0;
+        --accent: #7c5aff;
+        --accent-hover: #6939e0;
+        --shadow: rgba(0,0,0,0.6);
+    }
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column; /* Header, Main, Footer en columna */
+    min-height: 100vh;      /* ocupa toda la altura de la ventana */
+}
+main {
+    flex: 1;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+h2{
+    margin-top: 1rem;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.3s;
+}
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* Barra de navegación */
+header {
+    background: var(--bg-alt);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav a {
+    font-weight: 500;
+}
+
+/* Contenedores generales */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+/* Tarjetas de herramientas */
+.tool-card {
+    background: var(--bg-alt);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+/* Botones */
+button {
+    padding: 0.7rem 1.5rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: var(--accent-hover);
+}
+
+/* Inputs */
+input[type="file"], input[type="text"], select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0.5rem 0;
+}
+
+/* Grid de herramientas */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-alt);
+    color: var(--text);
+    margin-top: 3rem;
+    box-shadow: 0 -2px 6px var(--shadow);
+    position: fixed 0;
+}
